@@ -2,6 +2,10 @@
 
 ## Клон Волгограда01.11.2026 — текущий проект
 
+- Проверка после деплоя: опубликованные index.html, CSS index-BANaAngm.css, JS index-BuNiq6Uz.js/prerender-BoJQulYp.js, metrika.js, robots/sitemap/privacy/favicon/verification и все локальные фото через website endpoint HTTP200. Хеши JS на Linux Actions отличаются от локальной Windows-сборки: проверять именно ссылки опубликованного HTML, не считать старые локальные имена ошибками сайта. Browser website endpoint блокируется ERR_BLOCKED_BY_CLIENT; обходов не делать. Нужны итоговая браузерная проверка на штатном домене после DNS/SSL, настройка адреса в Метрике и подтверждение Вебмастера.
+
+- Публикация01.11: коммит5e2e54e pushed main, первый Yandex Actions run41323815719 SUCCESS. Сборка успешна. Публичный DNS1.1.1.1 нового домена пока NXDOMAIN, fpq62gdbrrlahdrruc08 Validating/Pending; не пересоздавать. Метрика113181548 под dima.radzun доступна по заголовку, но iframe настроек после перезагрузки пустой: дополнительный домен ещё НЕ подтверждён в настройках. Вебмастер нового домена ещё НЕ подтверждён, ждать публичного HTTPS.
+
 - 01.11 продолжение: пользователь явно подтвердил отдельный deployer и новый S3-ключ. Создан vershina034-deployer (aje61m97j8e3te30hi4s), без ролей каталога; storage.editor назначен непосредственно только бакету vershina034.ru. Новый ключ сохранён через UI только в GitHub Actions Secrets YC_STATIC_ACCESS_KEY_ID / YC_STATIC_SECRET_ACCESS_KEY, значения не сохранялись в файлах/логах.
 - Новые бакеты vershina034.ru и www.vershina034.ru: Standard, максимум1ГБ, публично только чтение объектов; список/настройки закрыты. Основной website index/error index.html; www HTTPS redirect на основной. DNS-зона dns11p4nkg13qc8uida6, apex ANAME/WWW CNAME на собственные website endpoints. Сертификат fpq62gdbrrlahdrruc08 root+www Validating, обе ACME CNAME созданы. Свой Webmaster meta/file44d97e2791f3f0b6 опубликован в исходниках; подтверждение после доступного HTTPS.
 
