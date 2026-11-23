@@ -15,6 +15,9 @@ document.head.appendChild(script);
 document.addEventListener("click", function (event) {
   var link = event.target.closest && event.target.closest("a[href]");
   if (!link) return;
+  if (/\/sertifikat\/(?:index\.html)?$/.test(location.pathname) && link.hasAttribute('data-cert-order')) {
+    window.ym(113181548, 'reachGoal', 'cert_order');
+  }
 
   var href = link.getAttribute("href") || "";
   var goal = null;
