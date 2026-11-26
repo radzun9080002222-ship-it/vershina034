@@ -29,3 +29,10 @@ document.addEventListener("click", function (event) {
 
   if (goal) window.ym(113181548, "reachGoal", goal);
 });
+
+document.addEventListener('click', function (event) {
+  if (event.target.closest && event.target.closest('#calc button')) window.ym(113181548, 'reachGoal', 'calc_interaction');
+});
+document.addEventListener('change', function (event) {
+  if (event.target.closest && event.target.closest('#calc')) window.ym(113181548, 'reachGoal', 'calc_interaction');
+});
